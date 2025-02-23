@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sheepCounted = 0;
+while (sheepCounted < 5) {
+		console.log("Посчитано овец: " + sheepCounted + "!");
+	sheepCounted++;
+}
+console.log("Хрррррррррр-псссс");
+
+let number = 10;
+
+while (number <= 20) {
+    console.log(number);
+    number += 2;
+}
+
+function printNumbers(){
+  let i = 7;
+  while (i<=98) {
+    console.log(i);
+    i += 7;
+  }
+}
+
+printNumbers();
+
+// const result = prompt('Введите чётное число', '')
+// // Вводим ДЕСЯТЬ и нажимаем ОК
+// if (result % 2 === 0) {
+//   // Проверка на чётность
+//   alert('Число чётное')
+// } else {
+//   alert('Число нечётное')
+// }
+
+// prompt('Как тебя зовут?', 'Саша')
+// // Текст: 'Как тебя зовут?', значение поля ввода: 'Саша'
+// prompt('Введите возраст', 18)
+// // 'Введите возраст', СТРОКА '18'
+
+//     </script>
+//     <script>
+        const countries = ['Россия', 'США', 'Китай', 'Индия'];
+let populations = [];
+
+//Получение населения для каждой страны
+for (let i = 0; i < countries.length; i++) {
+    let population = prompt(`Введите население для страны ${countries[i]}`);
+    populations.push(Number(population));
+}
+
+//Вычисление общей популяции
+let totalPopulation = 0;
+for (let i = 0; i < populations.length; i++) {
+    totalPopulation += populations[i];
+}
+for(let number=1; number<=10; number++){
+  const result=5*1
+console.log(`5*${number}=${result}`)}
+    
+// console.log(`Общая популяция всех стран: ${totalPopulation}`);
+
+
+//     </script>
+    <script>
+        let fruits = ["Яблоко", "Апельсин", "Слива"];
+
+//Проходит по значениям
+for (let fruit of fruits) {
+//Вывод каждого элемента массива на новой строке
+  console.log(fruit);
+}
+
+for(let i=0; i<=10;i++){
+  console.log(i)
+}
+
+for (let number = 1; number <= 20; number++) {
+  if(number % 2 === 0) {
+    console.log(number)
+  }
+}
+
+for(let number=1; number<=10; number++){
+  const result=5*1
+console.log(`5*${number}=${result}`)}
+
+let sum = 0 
+const n=100
+for(number=1; number<=100; number++){
+  sum+=number
+}
+console.log(sum)
+    
+    </script>
+    //все элементы массива в консоль
+    <script>
+        const array = [1, 2, 3, 4, 5]
+for(number=1; number<=5; number+=1){
+  console.log(number)
+}
+</script>
+//сумма
+<script>
+            const array2 = [1, 2, 3, 4, 5]
+let sum2 = 0
+for(number=1; number<=5; number++){
+  sum2+=number
+}
+console.log(sum)
+</script>
+<script>
+                const sentences = ['Hello, world!', 'How are you?']
+let result=sentences.split
+for(let result of sentences){
+console.log(result)
+}
+</script>
+<script>
+    //Пример того, как возвести каждый элемент цикла в квадрат
+
+const numbers = [1, 2, 3, 4, 5]
+let i = 0
+while (i < numbers.length) {
+  const currentElement = numbers[i]
+  console.log(currentElement * currentElement)
+  i++
+}
+// напечатает 1, 4, 9, 16, 25
+
+const words = ['apple', 'banana', 'cherry']
+for (let word of words) {
+  const newWord = word.toUpperCase()
+  console.log(newWord)
+}
+
+let i4=1
+let n4=10
+while(i<=10){
+  console.log(i)
+  i+=1
+}
+
+    </script>
+    <script>
+        let i2=1
+let n2=10
+while(i2>=10){
+  console.log(i2)
+  i2-=1
+}
+        </script>
+<script>
+const collection = ['one', 'two', 'three', 'four', 'stop', 'five'];
+
+for (let item of collection) {
+  if (item === 'stop') {
+    break;
+  }
+  console.log(item);}</script>
+<script>
+  for (let i = 0; i < 10; i++) {
+  if (i % 2) {
+    console.log( i );
+  }
+}
+</script>
+<script>
+  let i8 = 5; for (; i8 < 5; i8++) { console.log(i8); }
+
+  let animals = ["Кот", "Рыба", "Лемур"]
+for (let i = 0; i < animals.length; i++) {
+  const animal = animals[i];
+  const newAnimalString = `${animal} - прекрасное животное`
+  animals[i] = newAnimalString
+}
+console.log(animals)
+
+const list = ['apple', 'banana', 'cherry']
+for (let item of list) {
+  console.log(item.length)
+}
+
+const greeting = 'Hello, world!'
+const vowels = ['a', 'e', 'i', 'o', 'u']
+let count = 0
+for (let vowel of vowels) {
+  const newGreeting = greeting.toLowerCase()
+  for (let item of newGreeting) {
+    if(item === vowel) {
+      count += 1
+    }
+  }
+}
+console.log(count)
+
+
+const greeting2 = 'Hello, world!'
+const vowels2 = ['a', 'e', 'i', 'o', 'u']
+let count2 = 0
+for (let i = 0; i < greeting.length; i++) {
+    if (vowels.includes(greeting[i])) {
+        count++
+    }
+}
+
+console.log(`Количество гласных букв: ${count}`)
+
+const random = [2, 4, 6, -3, 8, 10];
+let index = 0;
+
+do {
+    if (random[index] < 0) {
+        break; // Прерываем цикл, если элемент отрицательный
+    }
+    console.log(random[index]); // Выводим текущий элемент
+    index++;
+} while (index < random.length);
+</script>
+</body>
+</html>

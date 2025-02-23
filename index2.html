@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers=[];
+        let i= -10;
+        for(i=-10; i<=10; i++){
+            numbers.push(i);
+        }
+        console.log("Изначальный массив:",numbers);
+
+        const numbers2=[-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10];
+        let num=numbers2.slice(11,21);
+        console.log("После удаления отрицательных чисел:", num);
+
+        // const numbers3= [1, 2, 3, 4, 5,6,7,8,9,10];
+for(let i=0; i<=numbers.length; i++){
+    numbers[i]=numbers[i]**2;
+}
+console.log(numbers);
+    </script> -->
+
+
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с массивом</title>
+</head>
+<body>
+    <h1>Работа с массивом</h1>
+    <script>
+        // Создаем пустой массив
+        const numbers = [];
+        
+        // Заполняем массив целыми числами от -10 до 10
+        for (let i = -10; i <= 10; i++) {
+            numbers.push(i);
+        }
+        console.log("Изначальный массив:", numbers);
+
+        //Удаляем все отрицательные числа из массива
+        for (let i = numbers.length - 1; i >= 0; i--) {
+            if (numbers[i] < 0) {
+                numbers.splice(i, 1);
+            }
+        }
+        console.log("После удаления отрицательных чисел:", numbers);
+
+        //Удаляем отрицательные числа
+        // let num=numbers.slice(11,21);
+        // console.log("После удаления отрицательных чисел:", num);
+
+        // Возводим каждое число в квадрат
+        for (let i = 0; i < numbers.length; i++) {
+            numbers[i] = numbers[i] ** 2;
+        }
+        console.log("После возведения в квадрат:", numbers);
+
+        // Сортируем числа в порядке убывания
+        numbers.sort((a, b) => b - a);
+        console.log("После сортировки в порядке убывания:", numbers);
+    </script>
+</body>
+</html>

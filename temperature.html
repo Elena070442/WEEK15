@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Температура в разных городах</title>
+</head>
+<body>
+    <h1>Температура в разных городах</h1>
+    <ul id="temperatureList"></ul>
+    <p id="maxTemp"></p>
+    <p id="minTemp"></p>
+
+    <script>
+        const cities = ['Краснодар', 'Сочи', 'Калининград', 'Санкт-Петербург'];
+        const temperatures = [];
+
+        // Запрашиваем температуру для каждого города
+        for (let i = 0; i < cities.length; i++) {
+            const temp = prompt(`Введите температуру для города ${cities[i]}:`);
+            temperatures.push(Number(temp));
+        }
+
+        // Создаем список с информацией о каждом городе и его температуре
+        const temperatureList = document.getElementById('temperatureList');
+        for (let i = 0; i < cities.length; i++) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${cities[i]}: ${temperatures[i]}°C`;
+            temperatureList.appendChild(listItem);
+        }
+
+        // Находим максимальную и минимальную температуру
+        let maxTemperature = -Infinity;
+        let minTemperature = Infinity;
+
+        for (let temp of temperatures) {
+            if (temp > maxTemperature) {
+                maxTemperature = temp;
+            }
+            if (temp < minTemperature) {
+                minTemperature = temp;
+            }
+        }
+        
+        // Выводим максимальную и минимальную температуру
+        document.getElementById('maxTemp').textContent = `Максимальная температура: ${maxTemperature}°C`;
+        document.getElementById('minTemp').textContent = `Минимальная температура: ${minTemperature}°C`;
+    </script>
+</body>
+</html>
